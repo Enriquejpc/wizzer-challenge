@@ -1,4 +1,4 @@
-package com.wizzer.challenge.bussinesscore.exceptions;
+package com.wizzer.challenge.businesscore.exceptions;
 
 
 import com.wizzer.challenge.config.ErrorCode;

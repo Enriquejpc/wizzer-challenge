@@ -20,26 +20,26 @@ CREATE TABLE CONVERSATION_CATEGORY
 
 CREATE TABLE CONVERSATION
 (
-    id              BIGINT AUTO_INCREMENT PRIMARY KEY,
+    id              INT AUTO_INCREMENT PRIMARY KEY,
     con_category_id INT NOT NULL ,
     subject         VARCHAR(MAX) NOT NULL,
-    created_at       TIMESTAMP NOT NULL,
+    created_at      TIMESTAMP NOT NULL,
     enabled         BOOLEAN  NOT NULL DEFAULT true,
     FOREIGN KEY (con_category_id) REFERENCES CONVERSATION_CATEGORY (id)
 );
 
 CREATE TABLE PERSON_CONVERSATION
 (
-    id              BIGINT AUTO_INCREMENT PRIMARY KEY,
-    conversation_id INT NOT NULL ,
-    person_id         VARCHAR NOT NULL,
+    id                  INT AUTO_INCREMENT PRIMARY KEY,
+    conversation_id     INT NOT NULL ,
+    person_id           VARCHAR NOT NULL,
     FOREIGN KEY (conversation_id) REFERENCES CONVERSATION (id),
     FOREIGN KEY (person_id) REFERENCES PERSON (id)
 );
 
 CREATE TABLE MESSAGE
 (
-    id                      BIGINT AUTO_INCREMENT PRIMARY KEY,
+    id                      INT AUTO_INCREMENT PRIMARY KEY,
     content                 VARCHAR(MAX) NOT NULL,
     person_conversation_id    INT NOT NULL ,
     posted_at                TIMESTAMP NULL,

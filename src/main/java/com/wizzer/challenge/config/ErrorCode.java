@@ -3,7 +3,7 @@ package com.wizzer.challenge.config;
 public enum ErrorCode {
 
     INTERNAL_ERROR(100, "Internal server error"),
-    WEB_CLIENT_GENERIC(101, "Error del Web Client"),
+    EXTERNAL_COMPONENT_GENERIC_ERROR(101, "External component error"),
     DATABASE_CONNECTION_ERROR(102, "Database connection has timed-out"),
     RESOURCE_NOT_FOUND_ERROR(103, "Resource not found"),
     RESOURCE_DUPLICATE_ERROR(104, "Duplicated resource"),
